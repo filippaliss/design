@@ -1,0 +1,71 @@
+@import '../../shared/fontawesome/scss/fontawesome';
+$fa-font-path: '../../shared/fontawesome/webfonts';
+@import '../../shared/fontawesome/scss/brands';
+@import '../../shared/fontawesome/scss/solid';
+@import '../../shared/fontawesome/scss/regular';
+
+@import '../../node_modules/normalize.css/normalize';
+@import 'variables';
+
+@import 'blockquotes';
+@import 'code';
+@import 'mobile-nav';
+//@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300&family=Playfair+Display:wght@500&display=swap');
+
+* {
+    font-family: 'Noto Sans Georgian', sans-serif;
+    color: $font-color;
+    box-sizing: border-box;
+    border: 0 none;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+.logofunka {
+    height: 100px;
+}
+
+.main {
+    text-align: center;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('./../../../assets/img/julbild.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+p {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.footer {
+    margin-top: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #222;
+    background-color:$background-alternative-color;
+}
+
+.header, .site-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    background-color:$background-alternative-color;
+}
+
+.header, .footer {
+    flex: 0 0 auto;
+}
