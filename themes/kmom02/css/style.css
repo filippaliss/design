@@ -6509,6 +6509,116 @@ pre code {
     cursor: pointer;
   }
 }
+.landingpage {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 80%;
+  margin: 0 auto;
+}
+
+.landingpage h1 {
+  grid-column: span 3;
+  justify-self: center;
+}
+
+.landingpage > div {
+  text-align: left;
+  background-color: rgb(241, 152, 29);
+  height: 85px;
+  font-size: 11px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.underline {
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.grid-container > div {
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.select-article {
+  grid-row: span 1;
+  grid-column: span 1;
+  border: 1px solid #435943;
+  padding: 15px;
+  margin-left: 10px;
+  border-radius: 6px;
+}
+
+.css {
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.html {
+  grid-row: span 1;
+  grid-column: span 2;
+}
+
+.js {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.php {
+  grid-row: span 2;
+  grid-column: span 1;
+}
+
+.python {
+  grid-row: span 3;
+  grid-column: span 3;
+}
+
+.git {
+  grid-row: span 4;
+  grid-column: span 1;
+}
+
+.sqlite {
+  grid-row: span 4;
+  grid-column: span 2;
+}
+
+.single-technology {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.tech-menu {
+  width: 20%;
+  border: 2px solid rgb(168, 191, 229);
+  padding: 15px;
+  text-align: left;
+  margin-left: 10px;
+  border-radius: 6px;
+  margin: 0 auto;
+  background-color: rgb(218, 227, 170);
+}
+
+.tech-content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (max-width: 760px) {
+  .tech-menu {
+    display: none;
+  }
+  .tech-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 * {
   font-family: "Noto Sans Georgian", sans-serif;
   color: #000;
