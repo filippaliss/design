@@ -13,9 +13,10 @@
 
 .landingpage > div {
     text-align: left;
-    background-color: rgb(241, 152, 29);
+    background-color: $background-color-technology;
     height: 85px;
     font-size: 11px;
+    color: $nav-color1;
 }
 
 a {
@@ -23,8 +24,8 @@ a {
 }
 
 .underline {
-    color: rgb(0, 0, 0);
-    border-bottom: 1px solid rgb(0, 0, 0);
+    color: $color-underline;
+    border-bottom: 1px solid $color-underline;
 }
 
 .grid-container > div {
@@ -76,6 +77,19 @@ a {
     grid-column: span 2;
 }
 
+.load{
+    grid-row: span 1;
+    grid-column: span 1;
+}
+.colors{
+    grid-row: span 1;
+    grid-column: span 2;
+}
+.dp{
+    grid-row: span 2;
+    grid-column: span 3;
+}
+
 .single-technology {
     display: flex;
     flex-direction: row;
@@ -85,13 +99,13 @@ a {
 
 .tech-menu{
     width: 20%;
-    border: 2px solid rgb(168, 191, 229);
+    border: 2px solid $tech-menu-color;
     padding: 15px;
     text-align: left;
     margin-left: 10px;
     border-radius: 6px;
     margin: 0 auto;
-    background-color: rgb(218, 227, 170);
+    background-color: $tech-menu-background;
 
 }
 

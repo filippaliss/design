@@ -15,8 +15,14 @@
 }
 
 .nav a, .nav-toggle {
-    color: #333;
+    color: $nav-color1;
 }
+
+.nav a:hover, .nav-toggle:hover {
+    color: $nav-color2;
+    font-weight: bold; /* Add this line to make the text bolder */
+}
+
 
 .nav-toggle {
     display: none;
