@@ -1,0 +1,21 @@
+.excel {
+    display: inline-block;
+    width: 800px;
+    height: 120px;
+    border: 0;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+@media (max-width: 800px) {
+    .excel {
+        width: 500px;
+    }
+}
+
+@media (max-width: 500px) {
+    .excel {
+        width: 300px;
+    }
+}

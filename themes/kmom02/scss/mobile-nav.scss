@@ -1,62 +1,69 @@
+@use 'sass:color';
+
 .slide {
-    overflow-y: hidden !important;
-    transition: height 0.5s ease-in !important;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 0.4s ease-in-out;
 }
 
-.nav ul {
+.nav.open .slide {
+    max-height: 500px;
+}
+
+.nav-list {
     display: flex;
     justify-content: flex-end;
-    padding: 1em 0;
     list-style: none;
-}
+    padding: 1em 0;
 
-.nav ul li {
-    padding: 0 1em;
-}
-
-.nav a, .nav-toggle {
-    color: $nav-color1;
-}
-
-.nav a:hover, .nav-toggle:hover {
-    color: $nav-color2;
-    font-weight: bold; /* Add this line to make the text bolder */
-}
-
-
-.nav-toggle {
-    display: none;
-}
-
-@media (max-width: 767px) {
-    .header {
-        flex-direction: column;
-    }
-
-    .nav ul {
+    @media (max-width: 767px) {
         flex-direction: column;
         padding-bottom: 1em;
     }
+}
 
-    .nav ul li {
-        display: flex;
-        flex-direction: column;
+.nav-item {
+    padding: 0 1em;
+
+    @media (max-width: 767px) {
+        padding: 0.5em 0;
         text-align: center;
     }
+}
 
-    .nav ul li a {
-        display: block;
-        padding: 0.5em 0;
-    }
+.nav-link,
+.nav-toggle {
+    color: $nav-color1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
-    .js .nav-toggle {
+.nav-link:hover,
+.nav-toggle:hover {
+    color: $nav-color2;
+    background-color: color.adjust($nav-color2, $lightness: 35%);
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.nav-toggle {
+    display: none;
+
+    @media (max-width: 767px) {
         display: block;
         float: right;
-        width: 2em;
-        margin: 0.6667em 0;
+        width: 2.5em;
+        height: 2.5em;
+        margin: 0.5em 1em;
         font-size: 1.5rem;
-        line-height: 2em;
+        line-height: 2.5em;
         text-align: center;
         cursor: pointer;
+        background: none;
+        border: 0;
+
+        &:focus {
+            outline: 2px solid $nav-color2;
+        }
     }
 }

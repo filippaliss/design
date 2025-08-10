@@ -1,52 +1,76 @@
-@import '../../shared/fontawesome/scss/fontawesome';
+@use 'sass:color';
+
+// FontAwesome
 $fa-font-path: '../../shared/fontawesome/webfonts';
+@import '../../shared/fontawesome/scss/fontawesome';
 @import '../../shared/fontawesome/scss/brands';
 @import '../../shared/fontawesome/scss/solid';
 @import '../../shared/fontawesome/scss/regular';
 
+// Normalize & Light Theme Variables
 @import '../../node_modules/normalize.css/normalize';
 @import 'variables';
 
+// Komponenter
 @import 'blockquotes';
 @import 'code';
 @import 'mobile-nav';
 @import 'technology';
-//@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+@import 'gallery';
+@import 'excel';
+
+// Typsnitt
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300&family=Playfair+Display:wght@500&display=swap');
 
+// Basregler
 * {
-    font-family: 'Noto Sans Georgian', sans-serif;
+    font-family: $font-body;
     color: $font-color;
     box-sizing: border-box;
-    border: 0 none;
+    border: 0;
     padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-}
-
-.logofunka {
-    height: 100px;
-}
-
-.main {
-    text-align: center;
+    font-family: $font-heading;
+    color: $font-color;
 }
 
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url('./../../../assets/img/julbild.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: $background-color;
+}
+
+.main {
+    text-align: center;
+    flex: 1 0 auto;
+    background-color: $background-color;
 }
 
 p {
     max-width: 80%;
     margin: 0 auto;
+    color: $font-color;
+
+    @media (max-width: 767px) {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+
+.header,
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $background-alternative-color;
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .footer {
@@ -54,26 +78,29 @@ p {
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid #222;
-    background-color:$background-alternative-color;
+    border-top: 1px solid color.adjust($background-color, $lightness: -20%);
+    background-color: $background-alternative-color;
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
-.header, .site-header {
-    display: flex;
-    justify-content: space-between;
+.logofunka {
+    height: 100px;
+    object-fit: contain;
 }
 
-.header {
-    background-color:$background-alternative-color;
-}
-
-.header, .footer {
-    flex: 0 0 auto;
-}
-
-.colorTable{
-    border-spacing: 4px; 
-    border-collapse: separate; 
+.color-table {
+    border-spacing: 4px;
+    border-collapse: separate;
     margin: auto;
+}
 
+// Tillgänglighet & interaktivitet
+a:focus, .nav-toggle:focus {
+    outline: 2px solid $accent-color;
+    outline-offset: 2px;
 }
