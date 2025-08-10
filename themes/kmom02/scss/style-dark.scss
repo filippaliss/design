@@ -31,6 +31,10 @@ $fa-font-path: '../../shared/fontawesome/webfonts';
     padding: 0;
 }
 
+.nav ul li a {
+    color: $nav-color1;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-heading;
     color: $font-color;

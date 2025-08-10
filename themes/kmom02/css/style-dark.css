@@ -6463,6 +6463,10 @@ pre code {
   transition: max-height 0.4s ease-in-out;
 }
 
+.nav ul li a {
+  color: #fff;
+}
+
 .nav.open .slide {
   max-height: 500px;
 }
@@ -6737,6 +6741,10 @@ a {
   box-sizing: border-box;
   border: 0;
   padding: 0;
+}
+
+.nav ul li a {
+  color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {

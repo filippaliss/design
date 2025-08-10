@@ -6,6 +6,10 @@
     transition: max-height 0.4s ease-in-out;
 }
 
+.nav ul li a {
+    color: $nav-color1;
+}
+
 .nav.open .slide {
     max-height: 500px;
 }
